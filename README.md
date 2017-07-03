@@ -1,12 +1,83 @@
-# KCKit
-针对网页游戏《舰队COLLECTION》的JavaScript工具库。当前包括以下功能：
+# Metas
+Generate meta tags for HTML page
 
-1. 舰娘 (Ship)、装备 (Equipment) 的类 (Class)
-  * 基于[KanColle-JSON-Database](https://github.com/Diablohu/KanColle-JSON-Database)
-2. 舰娘属性计算
-3. 舰娘的威力计算，可加载装备、设定等级
-  * 炮击威力
-  * 雷击威力
-  * 夜战类型 & 威力
-  * 制空战力
-  
+## Install
+
+```sh
+npm install metas
+```
+
+## Usage
+
+```js
+import metas from 'metas';
+
+// get as HTML
+metas({
+    title: "PAGE TITLE"
+})
+/* ->
+<meta charset="utf-8"/>
+<meta itemprop="name" content="PAGE TITLE"/>
+<meta name="twitter:title" content="PAGE TITLE"/>
+<meta name="og:title" content="PAGE TITLE"/>
+*/
+
+// get as Array
+metas({
+    title: "PAGE TITLE"
+}, true)
+/* ->
+[{
+    charset: 'utf-8'
+}, {
+    itemprop: 'name',
+    content: 'TITLE'
+}, {
+    name: 'twitter:title',
+    content: 'TITLE'
+}, {
+    name: 'og:title',
+    content: 'TITLE'
+}]
+*/
+```
+
+## Options
+
+```js
+metas( options = {}, returnArray = false );
+```
+
+* Page infos
+  * `options.title`
+    <br>Page title
+  * `options.description`
+    <br>Page description
+  * `options.image`
+    <br>Preview image
+  * `options.video`
+    <br>Media (Audio/Video) source url
+  * `options.url`
+    <br>URL for the page
+  * `options.charset`
+    <br>charset for the page
+  * `options.locale`
+    <br>Locale name (eg. en_US)
+  * `options.type`
+    <br>Page type (eg. website, article...)
+* Site infos
+  * `options.siteName`
+    <br>Site name
+* For Twitter
+  * `options.twitter.card`
+    <br>Twitter card type (eg. summary, player)
+  * `options.twitter.siteCreator`
+    <br>Username of the site creator/administrator on Twitter
+  * `options.twitter.author`
+    <br>Username of the author for this page on Twitter
+* For Facebook
+  * `options.facebook.adminsId`
+    <br>User ID(s) of the site creator/administrator on Facebook
+  * `options.facebook.appId`
+    <br>Facebook App ID

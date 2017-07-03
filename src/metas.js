@@ -7,11 +7,11 @@ module.exports = (options = {
         video
         url
         charset
+        locale
+        type
     
     // site infos
         siteName
-        locale
-        type
     
     // for Twitter
         twitter.card
