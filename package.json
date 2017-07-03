@@ -1,0 +1,28 @@
+{
+    "name": "metas",
+    "main": "src/metas.js",
+
+    "version": "1.0.0",
+
+    "description": "Generate meta tags for HTML page",
+    "author": {
+        "name": "Diablohu",
+        "email": "diablohudream@gmail.com",
+        "url": "http://diablohu.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Diablohu/KCKit"
+    },
+
+    "scripts": {
+        "test": "jest"
+    },
+
+    "dependencies": {
+    },
+    "devDependencies": {
+        "jest": "^20.0.4"
+    }
+}
