@@ -53,7 +53,7 @@ module.exports = (options = {
             content: o.title
         })
         metas.push({
-            name: 'og:title',
+            property: 'og:title',
             content: o.title
         })
     }
@@ -68,11 +68,11 @@ module.exports = (options = {
             content: o.description
         })
         metas.push({
-            itemprop: 'twitter:description',
+            name: 'twitter:description',
             content: o.description
         })
         metas.push({
-            itemprop: 'og:description',
+            property: 'og:description',
             content: o.description
         })
     }
@@ -87,11 +87,11 @@ module.exports = (options = {
             content: o.image
         })
         metas.push({
-            itemprop: 'twitter:image:src',
+            name: 'twitter:image:src',
             content: o.image
         })
         metas.push({
-            itemprop: 'og:image',
+            property: 'og:image',
             content: o.image
         })
     }
@@ -102,35 +102,35 @@ module.exports = (options = {
             content: o.video
         })
         metas.push({
-            itemprop: 'og:video',
+            property: 'og:video',
             content: o.video
         })
     }
 
     if (typeof o.url !== 'undefined') {
         metas.push({
-            name: 'og:url',
+            property: 'og:url',
             content: o.url
         })
     }
 
     if (typeof o.siteName !== 'undefined') {
         metas.push({
-            name: 'og:site_name',
+            property: 'og:site_name',
             content: o.siteName
         })
     }
 
     if (typeof o.locale !== 'undefined') {
         metas.push({
-            name: 'og:locale',
+            property: 'og:locale',
             content: o.locale
         })
     }
 
     if (typeof o.type !== 'undefined') {
         metas.push({
-            name: 'og:type',
+            property: 'og:type',
             content: o.type
         })
     }

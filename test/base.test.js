@@ -37,7 +37,7 @@ describe('Base functions/utilities', () => {
                     name: 'twitter:title',
                     content: 'TITLE'
                 }, {
-                    name: 'og:title',
+                    property: 'og:title',
                     content: 'TITLE'
                 }]
                 );
@@ -57,7 +57,7 @@ describe('Base functions/utilities', () => {
                 '<meta charset="utf-8"/>'
                 + '<meta itemprop="name" content="TITLE"/>'
                 + '<meta name="twitter:title" content="TITLE"/>'
-                + '<meta name="og:title" content="TITLE"/>'
+                + '<meta property="og:title" content="TITLE"/>'
                 );
         });
     });
